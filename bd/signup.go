@@ -22,7 +22,9 @@ func SignUp(sig models.SignUp) error {
 	_, err = Db.Exec(setencia)
 	if err != nil {
 		fmt.Println(err.Error())
+		return err
 
 	}
+	fmt.Println("SignUp > Ejecuciòn existosa")
 	return nil
 }
